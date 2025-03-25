@@ -73,3 +73,33 @@ $primary-color: #0099ff
     color: $button-color; // Usa #ff5500, no #0099ff
     }
 ~~~
+
+5. At Rules: si se tienen muchas hojas de estilos, se pueden modularizar usando at rules:
+    - Es una declaracion que cumple con funciones, se inicializa con un arroba (@).
+    - Ayudan a mantener compatibilidad con futuras versiones de CSS.
+    - Ejemplos de at rules son:
+        - @use: sirve para importar los modulos, estilos y funciones de otras hojas de estilos
+        - @import: import se encarga de hacer los estilos globales
+        - @function: permite crear funciones personalizadas, sin embargo, sass cuenta con funciones ya existentes
+        - @forward: recibe como parametro una url y ayuda a cargar los estilos de una hoja de estilos
+        - @extend: es una directiva que permite compartir una serie de propiedades css de un selector a otro, es una forma de heredar todos los estilos de una clase en otra, esto ayuda a evitar la duplicación de códgio, mantener una estilización consistente y crear relaciones entre estilos.
+        - @at-root: se encarga del manejo (carga) de los estilos del root de la aplicación
+    - Ejemplos de ar rules de compilación podemos encontrar:
+        - @error: se presenta cuando hay errores de compilación
+        - @warn: se presenta para mostrar posibles cambios o mejoras en el código
+        - @debug: se utiliza para resolver y encontrar errores de una manera más sencilla
+        - @include: se utiliza para invocar los mixins
+        - @for, @if, @each, @while: se usan para estructuras de control (se pueden usar dentro de funciones)
+    - Nesting: se trata de la anidación de selectores, esto ayuda a la simplificación del código. Estos deben escribirse en el orden que aparecen en el HTML
+
+# Expresiones
+1. Una expresión es todo aquello que va del lado derecho de una variable, esto admite diferentes tipos de valores
+2. Las expresiones son mucho más poderosas que los valor CSS simples ya que se pueden pasar como argumentos a los mixins y a las funciones.
+3. Ejemplos de expresiones literales:
+    - Números
+    - Strings
+    - Colores
+    - Booleanos
+    - Null
+    - Listas
+    - Mapas
