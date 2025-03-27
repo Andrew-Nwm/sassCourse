@@ -1,10 +1,14 @@
-$primary-color: #ffefe7;
-$secondary-color: #ffdac6;
-$tertiary-color: #babd8d;
-$primary-text-color: #2e4057;
-$quaternary-color: #fa9500;
+$primary-color: #FFEFE7;
+$secondary-color: #FFDAC6;
+$tertiary-color: #BABD8D;
+$primary-text-color: #7C6A0A;
+$quaternary-color: #FA9500;
 $font-stack: "IBM Plex Sans", sans-serif;
 $paragraph-font-size: 1.5em;
+
+*{
+  transition: all 0.4s ease;
+}
 
 body {
   box-sizing: border-box;
@@ -55,16 +59,18 @@ article {
   }
 
   h1 {
+    color: $primary-text-color;
     font-size: 3em;
     font-weight: bold;
     padding: 0;
   }
 
   p {
+    color: $primary-text-color;
     font-size: $paragraph-font-size;
   }
 
-  button {
+  .learn-more {
     width: 12vw;
     padding: 20px;
     background-color: $quaternary-color;
@@ -73,12 +79,72 @@ article {
     color: white;
     font-size: 1em;
     font-weight: 600;
+    transition: 0.4s ease;
     cursor: pointer;
+  }
+
+  .learn-more:hover {
+    background-color: darken($quaternary-color, 10%);
+    transition: 0.4s ease;
   }
 
   img {
     width: 25vw;
     border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+section{
+  width: auto;
+  height: auto;
+  padding: 50px;
+  h2{
+    font-size: 2em;
+    color: $primary-text-color;
+    font-weight: 400;
+  }
+  .healthcare{
+    h2{
+      font-weight: 300;
+    }
+    .product-card{
+      width: 12vw;
+      height: auto;
+      background-color: $secondary-color;
+      color: $primary-text-color;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      .heart-icon{
+        font-size: calc(1em + 0.5vw);
+        color: $primary-text-color;
+        align-self: flex-end;
+        cursor: pointer;
+        padding-bottom: 8px;
+        transition: 0.4s ease;
+      }
+      img{
+        width: calc(100% - 30px);
+        height: auto;
+        border-radius: 20px;
+        display: flex;
+        margin: 0 auto;
+        background-image: cover;
+      }
+      h3{
+        font-size: calc(1.1em + 0.3vw);
+        font-weight: 600;
+        padding-left: 12px;
+      }
+      p{
+        font-size: calc(0.8em + 0.3vw);
+        font-weight: 300;
+        padding-left: 12px;
+      }
+    }
   }
 }
 
