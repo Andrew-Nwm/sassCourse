@@ -1,12 +1,12 @@
-$primary-color: #FFEFE7;
-$secondary-color: #FFDAC6;
-$tertiary-color: #BABD8D;
-$primary-text-color: #7C6A0A;
-$quaternary-color: #FA9500;
+$primary-color: #ffefe7;
+$secondary-color: #ffdac6;
+$tertiary-color: #babd8d;
+$primary-text-color: #7c6a0a;
+$quaternary-color: #fa9500;
 $font-stack: "IBM Plex Sans", sans-serif;
 $paragraph-font-size: 1.5em;
 
-*{
+* {
   transition: all 0.4s ease;
 }
 
@@ -96,53 +96,70 @@ article {
   }
 }
 
-section{
+section {
   width: auto;
   height: auto;
   padding: 50px;
-  h2{
+  h2 {
     font-size: 2em;
     color: $primary-text-color;
     font-weight: 400;
   }
-  .healthcare{
-    h2{
+  .healthcare {
+    h2 {
       font-weight: 300;
     }
-    .product-card{
-      width: 12vw;
+    .card-section {
+      width: auto;
       height: auto;
-      background-color: $secondary-color;
-      color: $primary-text-color;
-      padding: 15px;
-      border-radius: 8px;
       display: flex;
-      flex-direction: column;
-      .heart-icon{
-        font-size: calc(1em + 0.5vw);
-        color: $primary-text-color;
-        align-self: flex-end;
-        cursor: pointer;
-        padding-bottom: 8px;
-        transition: 0.4s ease;
-      }
-      img{
-        width: calc(100% - 30px);
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 100px;
+      row-gap: 60px;
+      .product-card {
+        width: 14vw;
         height: auto;
-        border-radius: 20px;
+        background-color: $secondary-color;
+        color: $primary-text-color;
+        padding: 15px;
+        border-radius: 8px;
         display: flex;
-        margin: 0 auto;
-        background-image: cover;
-      }
-      h3{
-        font-size: calc(1.1em + 0.3vw);
-        font-weight: 600;
-        padding-left: 12px;
-      }
-      p{
-        font-size: calc(0.8em + 0.3vw);
-        font-weight: 300;
-        padding-left: 12px;
+        flex-direction: column;
+        .heart-icon {
+          color: $primary-text-color;
+          align-self: flex-end;
+          padding-bottom: 8px;
+          transition: 0.4s ease;
+          cursor: pointer;
+        }
+        .product-image {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 13vw;
+            height: auto;
+            border-radius: 20px;
+            display: flex;
+            margin: 0 auto;
+            object-fit: cover;
+          }
+        }
+        h3 {
+          font-size: calc(1.1em + 0.3vw);
+          font-weight: 600;
+          padding: 0 10px;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: calc(0.8em + 0.3vw);
+          font-weight: 300;
+          padding: 0 10px;
+        }
       }
     }
   }
